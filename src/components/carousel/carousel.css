@@ -1,0 +1,130 @@
+.carousel-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.carousel-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .carousel-grid {
+        grid-template-columns: 1fr 2fr; /* Changed to give more space for slides */
+    }
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.main-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+    width: 100%;
+}
+
+.main-description {
+    margin-top: 1rem;
+    color: #4B5563;
+    width: 90%;
+}
+
+.explore-button {
+    display: flex;
+    justify-content: center;
+    background-color: #D97706;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+}
+
+.explore-button:hover {
+    background-color: #B45309;
+}
+
+
+.slider-section {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-overflow {
+    display: flex;
+    transition: transform 0.5s ease-out; /* Smooth transition for horizontal sliding */
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+}
+
+.slide {
+    flex-shrink: 0; /* Prevent slide shrinkage */
+    width: 100%;
+    height: 100%; /* Ensure slide fills the container height */
+    position: relative; /* To position overlays on top of the image */
+}
+
+.slide-image {
+    width: 60%;
+    height: 60%; /* Ensure image fills the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.slide-info-overlay {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-info-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.slide-meta {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.slide-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Make sure it stays on top of the slider */
+}
+
+.icon {
+    font-size: 24px;
+}
