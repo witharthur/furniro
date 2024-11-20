@@ -45,7 +45,7 @@ const Carousel = () => {
                     <div className="slider-overflow">
                         <div
                             className="slider-track"
-                            style={{transform: `translateX(-${currentSlide * 72}%)`}}
+                            style={{transform: `translateX(-${currentSlide * 50}%)`}}
                         >
                             {slides.map((slide, index) => (
                                 <div key={slide.id} className="slide">

@@ -73,13 +73,13 @@
 
 .slide {
     flex-shrink: 0; /* Prevent slide shrinkage */
-    width: 65%;
+    width: 50%;
     height: 100%; /* Ensure slide fills the container height */
     position: relative; /* To position overlays on top of the image */
 }
 
 .slide-image {
-    width: 75%;
+    width: 97%;
     height: auto; /* Ensure image fills the container */
     object-fit: cover; /* Maintain aspect ratio and cover the area */
 }
