@@ -2,6 +2,7 @@
     max-width: 72rem;
     margin: 0 auto;
     padding: 2rem;
+    background-color: #FCF8F3;
 }
 
 .carousel-grid {
@@ -20,7 +21,6 @@
 .content-section {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
 }
 
 .main-title {
@@ -28,12 +28,17 @@
     font-weight: 700;
     color: #111827;
     line-height: 1.2;
+    max-width: 422px;
+    max-height: 96px;
+    margin-bottom: 3px;
+
     width: 100%;
 }
 
 .main-description {
-    margin-top: 1rem;
     color: #4B5563;
+    max-width: 368px;
+    max-height: 48px;
     width: 90%;
 }
 
@@ -42,18 +47,20 @@
     justify-content: center;
     background-color: #D97706;
     color: white;
+    max-width: 176px;
+    max-height: 48px;
     padding: 0.5rem 1.5rem;
     border-radius: 0;
     transition: background-color 0.2s;
     border: none;
     cursor: pointer;
+    margin: 10px 0px;
     width: 40%;
 }
 
 .explore-button:hover {
-    background-color: #B45309;
+    background-color: #D97706;
 }
-
 
 .slider-section {
     position: relative;
@@ -63,42 +70,60 @@
 
 .slider-overflow {
     display: flex;
-    transition: transform 0.5s ease-out; /* Smooth transition for horizontal sliding */
+    transition: transform 0.5s ease-out;
+    position: relative;
+    /* Smooth transition for horizontal sliding */
 }
 
 .slider-track {
     display: flex;
-    width: 75%;
+    width: 72%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .slide {
     flex-shrink: 0; /* Prevent slide shrinkage */
-    width: 65%;
+    width: 37%;
     height: 100%; /* Ensure slide fills the container height */
     position: relative; /* To position overlays on top of the image */
 }
 
 .slide-image {
-    width: 75%;
+    width: auto;
     height: auto; /* Ensure image fills the container */
     object-fit: cover; /* Maintain aspect ratio and cover the area */
+    max-width: 404px;
+    max-height: 582px;
 }
 
-
 .slide-info-content {
-    color: white;
-    text-align: center;
-    padding: 20px;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    max-width: 217px;
+    max-height: 130px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better visibility */
+    color: #000;
+    padding: 0px 20px;
+    border-radius: 0px;
+    text-align: left;
+    z-index: 2; /* Ensure it appears above the image */
 }
 
 .slide-meta {
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #616161;
 }
 
 .slide-title {
-    font-size: 24px;
-    font-weight: bold;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28px;
+    color: #3A3A3A;
 }
 
 .slide-arrow {
@@ -106,17 +131,66 @@
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: whitesmoke;
+    border: 2px solid #000; /* Regular border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Border shadow */
     color: #D97706;
     border: none;
-    padding: 13.5px 10px;
+    padding: 12px 13px;
     cursor: pointer;
     z-index: 10; /* Make sure it stays on top of the slider */
 }
 
 .icon {
     font-size: 24px;
+}
+
+.button-icon {
+    font-size: 2rem;
+}
+
+.slide-info-btn {
+    background-color: #D97706;
+    position: relative;
+    bottom: 88px; /* Place button outside overlay */
+    left: 250px;
+    max-height: 48px;
+    max-width: 48px;
+    transform: translateY(50%); /* Further adjust position downwards */
+    z-index: 10; /* Ensure button appears on top */
+}
+
+.iconnka {
+    max-height: 24px;
+    max-width: 24px;
+    padding: 2px;
+    position: relative;
+    left: -10px;
+}
+
+
+.dot-navigation.dot-navigation-red {
+    position: absolute;
+    bottom: 125px;
+    left: 179px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot-navigation-red .dot {
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: #D8D8D8;
+    border: none;
+    cursor: pointer;
+}
+
+.dot-navigation-red .dot.active {
+    background-color: #B88E2F;
 }

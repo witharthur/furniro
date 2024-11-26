@@ -20,6 +20,8 @@ import product_9 from "./product_9.webp"
 import slide_photo_1 from "./slide_photo_1.webp"
 import slide_photo_2 from "./slide_photo_2.webp"
 import slide_photo_3 from "./slide_photo_3.webp"
+import slide_photo_4 from "./slide_photo_4.webp"
+import rarrow from "./right-arrow.webp"
 
 
 export const assets = {
@@ -27,5 +29,6 @@ export const assets = {
     headre_banner,
     bedroom_img, dining_img, living_img,
     product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9,
-    slide_photo_1, slide_photo_2, slide_photo_3
+    slide_photo_1, slide_photo_2, slide_photo_3, slide_photo_4,
+    rarrow
 };
