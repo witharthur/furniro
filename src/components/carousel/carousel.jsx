@@ -45,7 +45,7 @@ const Carousel = () => {
                     <div className="slider-overflow">
                         <div
                             className="slider-track"
-                            style={{transform: `translateX(-${currentSlide * 100}%)`}}
+                            style={{transform: `translateX(-${currentSlide * 50}%)`}}
                         >
                             {slides.map((slide, index) => (
                                 <div key={slide.id} className="slide">
@@ -57,8 +57,8 @@ const Carousel = () => {
                                     {index === 0 && (
                                         <div className="slide-info-overlay">
                                             <div className="slide-info-content">
-                                                <p className="slide-meta">01 — Bed Room</p>
-                                                <h3 className="slide-title">Inner Peace</h3>
+                                                {/* <p className="slide-meta">01 — Bed Room</p>
+                                                <h3 className="slide-title">Inner Peace</h3> */}
                                             </div>
                                         </div>
                                     )}
