@@ -184,6 +184,7 @@
 .dot-navigation-red .dot {
     width: 30px;
     height: 30px;
+    padding: 0;
     margin: 0 4px;
     border-radius: 50%;
     background-color: #D8D8D8;
