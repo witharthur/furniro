@@ -21,10 +21,18 @@ const Carousel = () => {
             id: "03",
             image: assets.slide_photo_3,
         },
+        {
+            id: "04",
+            image: assets.slide_photo_4,
+        }
     ];
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
+    };
+
+    const handleDotClick = (index) => {
+        setCurrentSlide(index);
     };
 
     return (
@@ -45,7 +53,9 @@ const Carousel = () => {
                     <div className="slider-overflow">
                         <div
                             className="slider-track"
-                            style={{transform: `translateX(-${currentSlide * 100}%)`}}
+                            style={{
+                                transform: `translateX(-${Math.min(currentSlide * 72, 72)}%)`
+                            }}
                         >
                             {slides.map((slide, index) => (
                                 <div key={slide.id} className="slide">
@@ -60,11 +70,26 @@ const Carousel = () => {
                                                 <p className="slide-meta">01 — Bed Room</p>
                                                 <h3 className="slide-title">Inner Peace</h3>
                                             </div>
+                                            <button className="slide-info-btn" onClick={nextSlide}>
+                                                <img src={assets.rarrow} alt="" className="iconnka"/>
+                                            </button>
                                         </div>
                                     )}
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    {/* Dot Navigation */}
+                    <div className="dot-navigation dot-navigation-red">
+                        {slides.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`dot ${currentSlide === index ? "active" : ""}`}
+                                onClick={() => handleDotClick(index)}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
 
                     {/* Navigation button */}
