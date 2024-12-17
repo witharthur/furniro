@@ -22,6 +22,17 @@ import slide_photo_2 from "./slide_photo_2.webp"
 import slide_photo_3 from "./slide_photo_3.webp"
 import slide_photo_4 from "./slide_photo_4.webp"
 import rarrow from "./right-arrow.webp"
+import gallery_1 from "./gallery_1.png"
+import gallery_2 from "./gallery_2.png"
+import gallery_3 from "./gallery_3.png"
+import gallery_4 from "./gallery_4.png"
+import gallery_5 from "./gallery_5.png"
+import gallery_6 from "./gallery_6.png"
+import gallery_7 from "./gallery_7.png"
+import gallery_8 from "./gallery_8.png"
+import gallery_9 from "./gallery_9.png"
+import gallery_10 from "./gallery_10.png"
+import logo from "./forniro_logo.png"
 
 
 export const assets = {
@@ -30,5 +41,7 @@ export const assets = {
     bedroom_img, dining_img, living_img,
     product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9,
     slide_photo_1, slide_photo_2, slide_photo_3, slide_photo_4,
-    rarrow
+    rarrow,
+    gallery_9,gallery_8,gallery_7,gallery_6,gallery_5,gallery_4,gallery_3,gallery_2,gallery_1, gallery_10, logo
+
 };

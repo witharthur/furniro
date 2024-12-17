@@ -1,0 +1,157 @@
+.footer {
+  width: 100%;
+  padding: 48px 0;
+  background-color: #ffffff;margin-top: 137px;  border-top: 1px solid #D9D9D9; 
+
+
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Logo Section */
+.logo {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+  margin-bottom: 24px; font-family: "Poppins", serif;
+  font-weight: 700;
+  color: #000000;
+  font-style: normal;
+}
+
+.footer-content-left p {
+  color: #9F9F9F;
+  font-weight: 400;
+font-size: 16px; font-family: "Poppins", serif;
+font-style: normal;
+line-height: 24px;
+}
+
+/* Links and Help Sections */
+.footer-links h3,
+.footer-help h3,
+.footer-newsletter h3 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  color: #9F9F9F;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.footer-links ul,
+.footer-help ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-help li {
+  margin-bottom: 16px;
+}
+
+.footer-links a,
+.footer-help a {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-help a:hover {
+  color: #666666;
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+  max-width: 100%;
+}
+
+.newsletter-form {
+  display: flex;
+  border-bottom: 1px solid #9F9F9F;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  width: 179px;
+  height: 24px;
+  font-size: 14px;
+}
+
+.newsletter-input::placeholder {
+  color: #9F9F9F;  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.subscribe-btn {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #9F9F9F;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Copyright Section */
+.footer-copyright {
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding: 8px 20px;
+  font-size:16px;
+  line-height: 24px;
+  color: #000000;
+  font-size: 14px;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;  border-top: 1px solid #D9D9D9;
+   /* Разделительная линия до .footer */
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    
+  }
+  
+  .footer-content > div {
+    padding: 0;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .subscribe-btn {
+    width: fit-content;
+  }
+}

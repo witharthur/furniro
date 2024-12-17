@@ -1,20 +1,20 @@
 .carousel-container {
-    max-width: 72rem;
+    max-width: auto;
     margin: 0 auto;
-    padding: 2rem;
-    background-color: #FCF8F3;
-}
+    padding: 21px;
+background-color: #FAF3EA}
 
 .carousel-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2.5rem;
-    align-items: center;
+    align-items: center;  height: 80%;
+    max-height: 592px;
 }
 
 @media (min-width: 1024px) {
     .carousel-grid {
-        grid-template-columns: 1fr 2fr; /* Changed to give more space for slides */
+        grid-template-columns: 1fr 2fr; 
     }
 }
 
@@ -170,8 +170,6 @@
     position: relative;
     left: -10px;
 }
-
-
 .dot-navigation.dot-navigation-red {
     position: absolute;
     bottom: 125px;
@@ -179,19 +177,33 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 16px; /* Added for consistent spacing */
 }
 
 .dot-navigation-red .dot {
-    width: 30px;
-    height: 30px;
+    width: 13.9px; /* Reduced from 30px to match the design */
+    height: 14px;
     padding: 0;
-    margin: 0 4px;
+    margin: 0;
     border-radius: 50%;
     background-color: #D8D8D8;
     border: none;
     cursor: pointer;
+    position: relative; /* Added for pseudo-element positioning */
 }
 
 .dot-navigation-red .dot.active {
-    background-color: #B88E2F;
+    background-color: #D97706;
+}
+
+.dot-navigation-red .dot.active::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #D97706;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

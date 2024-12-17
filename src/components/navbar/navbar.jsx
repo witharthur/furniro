@@ -12,7 +12,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="navbar-logo">Furniro</div>
+      <div className="navbar-logo">
+        <img src={assets.logo} alt="" />
+        Furniro</div>
 
       <nav className="nav">
         <div className="navbar-toggle" onClick={toggleNavbar}>
