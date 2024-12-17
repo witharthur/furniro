@@ -5,6 +5,8 @@ import Header from "./components/header/header";
 import Ranges from "./components/ranges/ranges"
 import OurProducts from "./components/ourProducts/ourProducts";
 import Carousel from "./components/carousel/carousel"
+import Gallery from "./components/gallery/gallery";
+import Footer from "./components/footer/footer";
 
 import "./App.css";
 
@@ -19,6 +21,8 @@ function App() {
       <Ranges/>
       <OurProducts/>
       <Carousel/>
+      <Gallery/>
+      <Footer/>
       <Routes>
 
       </Routes>
